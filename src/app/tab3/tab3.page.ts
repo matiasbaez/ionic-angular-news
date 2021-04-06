@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { LocalDataService } from '../services/local-data.service';
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  sliderOpts = {
+    allowSlidePrev: false,
+    allowSlideNext: false
+  };
+
+  constructor(
+    public localDataService: LocalDataService
+  ) {}
 
 }
